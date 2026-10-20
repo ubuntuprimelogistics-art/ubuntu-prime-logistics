@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1730">
+  <meta name="description" content="Ubuntu Prime Logistics offers personal shopping, parcel collection and delivery, and local business deliveries. Based in Durban Central, KwaZulu-Natal, South Africa.">
+  <title>Ubuntu Prime Logistics | Reliable Deliveries. Personal Service.</title>
+  <style>
+    :root{--navy:#0b1730;--navy2:#132748;--gold:#d7b46a;--cream:#f8f6f0;--ink:#172033;--muted:#687386;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:#071124;color:#e8eaf0;font-size:.88rem;padding:9px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid #ffffff18}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+    .brand-mark{width:45px;height:45px;border:1.5px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:Georgia,serif;font-weight:bold;font-size:.9rem;letter-spacing:-1.5px;border-radius:50%;flex-shrink:0}
+    .brand-name{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;letter-spacing:.07em;line-height:1.2}
+    .brand-sub{font-size:.66rem;letter-spacing:.22em;color:var(--gold);margin-top:4px}
+    nav{display:flex;align-items:center;gap:25px}
+    nav a{text-decoration:none;font-size:.92rem;color:#e7eaf1}
+    nav a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:5px;text-decoration:none;font-weight:700;font-size:.92rem;transition:.2s;border:1px solid transparent;cursor:pointer}
+    .btn-gold{background:var(--gold);color:#101a2c}
+    .btn-gold:hover{background:#e7ca8b;transform:translateY(-1px)}
+    .btn-outline{border-color:#ffffff80;color:#fff}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .menu-btn{display:none;background:none;color:white;border:1px solid #ffffff50;padding:8px 10px;border-radius:4px}
+    .hero{background:linear-gradient(115deg,rgba(7,17,36,.97),rgba(11,23,48,.91) 58%,rgba(19,39,72,.88)),radial-gradient(circle at 85% 35%,#d7b46a55,transparent 30%);color:white;padding:88px 0 94px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px}
+    .eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+    h1,h2,h3{line-height:1.15}
+    h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.6rem,5vw,4.7rem);font-weight:500;letter-spacing:-.035em;margin:18px 0}
+    h1 span{color:var(--gold);font-style:italic}
+    .hero p{font-size:1.12rem;color:#d8deea;max-width:590px;margin:0 0 27px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-note{margin-top:25px;color:#b8c2d2;font-size:.87rem}
+    .hero-card{border:1px solid #d7b46a70;border-radius:12px;padding:27px;background:linear-gradient(145deg,#ffffff0d,#ffffff03);box-shadow:0 25px 70px #0003}
+    .route-line{display:flex;align-items:center;gap:12px;margin:19px 0}
+    .route-icon{width:42px;height:42px;border-radius:50%;background:#d7b46a1c;border:1px solid #d7b46a70;color:var(--gold);display:grid;place-items:center;flex-shrink:0;font-size:1.15rem}
+    .route-line strong{display:block;color:white}
+    .route-line small{color:#b8c2d2}
+    .mini-label{color:var(--gold);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+    .hero-card h3{font-family:Georgia,serif;font-weight:500;font-size:1.7rem;margin:8px 0 20px}
+    .section{padding:78px 0}
+    .section-head{max-width:690px;margin-bottom:35px}
+    .section-head h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(2rem,3.5vw,3rem);margin:10px 0 13px;color:var(--navy)}
+    .section-head p{color:var(--muted);margin:0}
+    .services{background:var(--cream)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{background:white;border:1px solid #e9e5dc;border-radius:9px;padding:26px;min-height:240px}
+    .service-icon{width:48px;height:48px;display:grid;place-items:center;background:#f3ead6;border-radius:8px;font-size:1.4rem;margin-bottom:20px}
+    .service-card h3{color:var(--navy);font-size:1.2rem;margin:0 0 10px}
+    .service-card p{color:var(--muted);font-size:.95rem;margin:0}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+    .step{border-top:2px solid var(--gold);padding-top:20px}
+    .step-number{font-family:Georgia,serif;color:var(--gold);font-size:2rem}
+    .step h3{font-size:1.12rem;color:var(--navy);margin:10px 0}
+    .step p{color:var(--muted);font-size:.95rem;margin:0}
+    .banner{background:var(--navy);color:white;padding:55px 0}
+    .banner-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .banner h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(1.8rem,3vw,2.7rem);margin:8px 0}
+    .banner p{color:#d3d9e5;margin:0;max-width:650px}
+    .area{background:#f8f6f0}
+    .area-box{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .area-box h2{font-family:Georgia,serif;font-size:2.5rem;font-weight:500;color:var(--navy);margin:10px 0}
+    .area-box p{color:var(--muted)}
+    .area-note{background:white;border-left:3px solid var(--gold);padding:20px 22px;border-radius:0 8px 8px 0;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+    .contact-info{background:var(--navy);color:white;border-radius:10px;padding:30px}
+    .contact-info h2{font-family:Georgia,serif;font-weight:500;font-size:2.1rem;margin:10px 0}
+    .contact-info p{color:#d0d8e5}
+    .contact-detail{border-top:1px solid #ffffff25;padding:15px 0;display:flex;gap:12px}
+    .contact-detail strong{display:block;color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+    .contact-detail span{color:#f2f4f8}
+    .contact-form{padding:8px 0}
+    .contact-form h3{font-size:1.4rem;color:var(--navy);margin-top:0}
+    label{display:block;font-weight:700;font-size:.9rem;margin:14px 0 6px}
+    input,select,textarea{width:100%;padding:13px 12px;border:1px solid #d8dce4;border-radius:5px;font:inherit;background:white}
+    textarea{min-height:115px;resize:vertical}
+    .form-help{font-size:.83rem;color:var(--muted);margin-top:10px}
+    footer{background:#071124;color:#c3cada;padding:25px 0;font-size:.87rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .gold{color:var(--gold)}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+    @media(max-width:800px){
+      nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy);padding:20px 4%;flex-direction:column;align-items:flex-start;border-top:1px solid #ffffff20}
+      nav.open{display:flex}
+      .menu-btn{display:block}
+      .nav>.btn{display:none}
+      .hero{padding:62px 0}
+      .hero-grid,.area-box,.contact-grid{grid-template-columns:1fr}
+      .hero-grid{gap:35px}
+      .service-grid,.how-grid{grid-template-columns:1fr}
+      .service-card{min-height:auto}
+      .banner-inner{align-items:flex-start;flex-direction:column}
+      .section{padding:58px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Personal shopping. Parcel collection. Business and shop-to-home delivery.</span>
+      <span>Based in Durban Central, KwaZulu-Natal, South Africa</span>
+    </div>
+  </div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Ubuntu Prime Logistics home">
+        <div class="brand-mark">UPL</div>
+        <div><div class="brand-name">UBUNTU PRIME</div><div class="brand-sub">LOGISTICS</div></div>
+      </a>
+      <nav id="siteNav">
+        <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#how-it-works">How it works</a><a href="#coverage">Coverage</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-gold" href="#contact">Book a delivery</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Your trusted delivery partner</div>
+          <h1>Ubuntu Prime <span>Logistics.</span></h1>
+          <p style="font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;color:var(--gold);margin-bottom:12px">Reliable deliveries. Personal service.</p>
+          <p>Professional, customer-focused support for parcel collection and delivery, personal shopping, business deliveries and shop-to-home delivery across KwaZulu-Natal, subject to availability.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="#contact">Request a delivery ↗</a>
+            <a class="btn btn-outline" href="#services">Explore our services</a>
+          </div>
+          <div class="hero-note">Durban Central, KwaZulu-Natal · Individual quotes · Booking subject to confirmed availability</div>
+        </div>
+        <aside class="hero-card">
+          <div class="mini-label">Your convenience comes first</div>
+          <h3>One message can get things moving.</h3>
+          <div class="route-line"><div class="route-icon">⌕</div><div><strong>Tell us what you need</strong><small>Share your shopping or collection details.</small></div></div>
+          <div class="route-line"><div class="route-icon">↗</div><div><strong>Confirm the details</strong><small>We confirm availability, timing and the cost.</small></div></div>
+          <div class="route-line"><div class="route-icon">✓</div><div><strong>Receive your delivery</strong><small>Get updates and delivery coordination.</small></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Everyday logistics, with a personal touch.</h2>
+          <p>Practical services for busy people and local businesses. Every request is assessed individually. We confirm availability, the price and estimated timing before you book.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">🛍</div><h3>Personal Shopping</h3><p>Need an item from a shop but can't get there yourself? Send your shopping list and preferred store for a quote and collection arrangement.</p></article>
+          <article class="service-card"><div class="service-icon">📦</div><h3>Parcel Collection & Delivery</h3><p>Arrange collection and delivery of suitable parcels. Share the pickup and drop-off details so we can confirm the route and price.</p></article>
+          <article class="service-card"><div class="service-icon">🏪</div><h3>Business Deliveries</h3><p>Delivery support for small businesses that need help getting orders to customers. Request a quote for one-off deliveries or regular arrangements.</p></article>
+          <article class="service-card"><div class="service-icon">🛍️</div><h3>Shop-to-Home Delivery</h3><p>Ask us to collect a purchase from a shop and deliver it to your address. Share the store and destination for an individual quote.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Simple process</div>
+          <h2>How it works</h2>
+          <p>A clear process from your first enquiry to delivery.</p>
+        </div>
+        <div class="how-grid">
+          <div class="step"><div class="step-number">01</div><h3>Send your request</h3><p>Tell us the service you need, the collection point, the destination and any important instructions.</p></div>
+          <div class="step"><div class="step-number">02</div><h3>Get a quote</h3><p>We'll assess the route and request, then confirm availability, the quote, payment arrangement and expected timing.</p></div>
+          <div class="step"><div class="step-number">03</div><h3>Confirm and receive</h3><p>Once details are agreed, we coordinate the collection and delivery and keep communication clear.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Pricing made clear</div>
+          <h2>Every job gets an individual quote.</h2>
+          <p>We do not publish fixed prices because the cost depends on your pickup and delivery locations, distance, item size, shopping requirements, waiting time and any extra stops.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">📍</div><h3>Share the locations</h3><p>Tell us where the collection starts and where the item needs to go.</p></article>
+          <article class="service-card"><div class="service-icon">🧾</div><h3>Receive your quote</h3><p>We assess the request and confirm the price and expected timing before you approve the booking.</p></article>
+          <article class="service-card"><div class="service-icon">✓</div><h3>Confirm availability</h3><p>We accept a booking only after transport, route and timing have been confirmed. Shopping goods are paid for separately by the customer.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="container banner-inner">
+        <div><div class="eyebrow">Need a hand?</div><h2>Let us take the trip off your to-do list.</h2><p>Contact Ubuntu Prime Logistics with your request. We'll discuss your needs and confirm the next steps.</p></div>
+        <a class="btn btn-gold" href="#contact">Contact us ↗</a>
+      </div>
+    </section>
+
+    <section class="section area" id="coverage">
+      <div class="container area-box">
+        <div><div class="eyebrow">Where we operate</div><h2>Rooted in Durban Central. Built to serve.</h2><p>Ubuntu Prime Logistics is based in Durban Central, KwaZulu-Natal, South Africa, and offers service coverage across KwaZulu-Natal. Contact us with your pickup and drop-off locations to check whether we can assist.</p></div>
+        <div class="area-note"><strong>Service availability</strong><br>Collections and deliveries are arranged according to customer requirements. Requests outside Durban are subject to availability confirmation before a booking is accepted. All bookings require confirmation of the delivery arrangements.</div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Get in touch</div>
+          <h2>Tell us what you need.</h2>
+          <p>Request an individual quote for parcel delivery, personal shopping, business deliveries or shop-to-home delivery. Availability and transport must be confirmed before a booking is accepted.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="eyebrow">Ubuntu Prime Logistics</div>
+            <h2>We're ready to hear from you.</h2>
+            <p>Contact us directly using our official business details below.</p>
+            <div class="contact-detail"><div>⌖</div><div><strong>Base</strong><span>Durban Central, KwaZulu-Natal, South Africa</span></div></div>
+            <div class="contact-detail"><div>☏</div><div><strong>WhatsApp / Phone</strong><span><a href="https://wa.me/27792379387" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline">+27 79 237 9387 — Message us on WhatsApp ↗</a></span></div></div>
+            <div class="contact-detail"><div>✉</div><div><strong>Email</strong><span><a href="mailto:ubuntuprimelogistics@gmail.com" style="color:var(--gold);text-decoration:underline">ubuntuprimelogistics@gmail.com ↗</a></span></div></div>
+            <div class="contact-detail"><div>◷</div><div><strong>Hours</strong><span>By arrangement — confirm availability before booking</span></div></div>
+            <div class="contact-detail"><div>f</div><div><strong>Facebook</strong><span><a href="https://www.facebook.com/share/1KBno46gua/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline">Visit our Facebook page ↗</a></span></div></div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px"><a class="btn btn-gold" href="https://wa.me/27792379387" target="_blank" rel="noopener noreferrer">WhatsApp us ↗</a><a class="btn btn-outline" href="mailto:ubuntuprimelogistics@gmail.com">Email us ↗</a></div>
+          </div>
+          <form class="contact-form" id="requestForm">
+            <h3>Start a delivery enquiry</h3>
+            <label for="customerName">Your name</label><input id="customerName" name="customerName" placeholder="Enter your name" required>
+            <label for="service">Service needed</label>
+            <select id="service" name="service" required><option value="">Choose a service</option><option>Personal shopping</option><option>Parcel collection and delivery</option><option>Business delivery</option><option>Shop-to-home delivery</option><option>Other enquiry</option></select>
+            <label for="pickup">Pickup location</label><input id="pickup" name="pickup" placeholder="Suburb or address" required>
+            <label for="dropoff">Delivery location</label><input id="dropoff" name="dropoff" placeholder="Suburb or address" required>
+            <label for="details">Item and other details</label><textarea id="details" name="details" placeholder="Describe the item, preferred date/time, and any special instructions"></textarea>
+            <button class="btn btn-gold" type="submit">Prepare enquiry</button>
+            <p class="form-help" id="formHelp">This form prepares your enquiry. After it appears, you can copy it and send it to us on WhatsApp at +27 79 237 9387 or by email at ubuntuprimelogistics@gmail.com.</p>
+            <div id="preparedMessage" hidden><label for="messageOutput">Your enquiry message</label><textarea id="messageOutput" readonly></textarea><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"><button class="btn btn-gold" type="button" id="copyMessage">Copy enquiry</button><a class="btn btn-outline" id="sendWhatsApp" href="https://wa.me/27792379387" target="_blank" rel="noopener noreferrer">Open WhatsApp ↗</a><a class="btn btn-outline" id="sendEmail" href="mailto:ubuntuprimelogistics@gmail.com">Open email ↗</a></div></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Ubuntu Prime Logistics. All rights reserved.</span><span>Service with purpose. Delivery with care. <span class="gold">◆</span></span><a href="https://www.facebook.com/share/1KBno46gua/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;font-weight:700">Facebook: Ubuntu Prime Logistics ↗</a></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('siteNav');
+    menuBtn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('requestForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const d = new FormData(event.target);
+      const msg = `Ubuntu Prime Logistics enquiry\nName: ${d.get('customerName')}\nService: ${d.get('service')}\nPickup: ${d.get('pickup')}\nDelivery: ${d.get('dropoff')}\nDetails: ${d.get('details') || 'Not provided'}\n\nPlease confirm availability, price and timing.`;
+      document.getElementById('messageOutput').value = msg;
+      document.getElementById('sendWhatsApp').href = 'https://wa.me/27792379387?text=' + encodeURIComponent(msg);
+      document.getElementById('sendEmail').href = 'mailto:ubuntuprimelogistics@gmail.com?subject=' + encodeURIComponent('Ubuntu Prime Logistics enquiry') + '&body=' + encodeURIComponent(msg);
+      document.getElementById('preparedMessage').hidden = false;
+      document.getElementById('formHelp').textContent = 'Your enquiry is ready. Copy it and send it through your preferred contact channel.';
+    });
+    document.getElementById('copyMessage').addEventListener('click', async () => {
+      const output = document.getElementById('messageOutput');
+      output.select();
+      try { await navigator.clipboard.writeText(output.value); document.getElementById('copyMessage').textContent = 'Copied'; }
+      catch(e) { document.getElementById('formHelp').textContent = 'Select the message above and copy it manually.'; }
+    });
+  </script>
+</body>
+</html>
